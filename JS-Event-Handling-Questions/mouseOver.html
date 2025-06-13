@@ -1,0 +1,35 @@
+<!--Create a div with some text inside. When the user hovers (mouse over) on the div, change its background color to light blue. When the mouse leaves, revert it back to white.-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mouse Over</title>
+  </head>
+  <body>
+    <div
+      id="hoverDiv"
+      style="
+        width: 100%;
+        height: 100px;
+        background-color: white;
+        text-align: center;
+        margin-top: 15px;
+      "
+    >
+      I am White color div want to see change Hover over me!
+    </div>
+
+    <script>
+      const hoverDiv = document.getElementById("hoverDiv");
+
+      hoverDiv.addEventListener("mouseover", function () {
+        hoverDiv.style.backgroundColor = "lightblue";
+      });
+
+      hoverDiv.addEventListener("mouseout", function () {
+        hoverDiv.style.backgroundColor = "white";
+      });
+    </script>
+  </body>
+</html>

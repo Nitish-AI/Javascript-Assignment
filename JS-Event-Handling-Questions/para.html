@@ -1,0 +1,36 @@
+<!-- This HTML file demonstrates how to add and remove a paragraph element
+     when a button is clicked, using JavaScript for event handling. -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Para</title>
+  </head>
+  <body>
+    <button id="btn" onclick="Para()">Add Para</button>
+
+    <script>
+      let isParaVisible = false;
+      let para;
+
+      function Para() {
+        const btn = document.getElementById("btn");
+
+        if (!isParaVisible) {
+          para = document.createElement("p");
+          para.innerHTML = "This is a simple paragraph.";
+          document.body.appendChild(para);
+          btn.textContent = "Hide Para";
+          isParaVisible = true;
+        } else {
+          if (para) {
+            document.body.removeChild(para);
+          }
+          btn.textContent = "Add Para";
+          isParaVisible = false;
+        }
+      }
+    </script>
+  </body>
+</html>
